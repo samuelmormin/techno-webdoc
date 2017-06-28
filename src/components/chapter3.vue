@@ -1,22 +1,30 @@
 <template>
   <div class="container-full">
-    <div class="chapter3-block-1">
-      <h1 class="chapter-3-title">
-        LIBERATION
-      </h1>
-      <p class="chapter-3-p">
-        Le Lorem Ipsum est simplement du fes, mais s'est aussi adasion dans des applications de mise en page de texte, comme Aldus PageMaker.
-      </p>
-      <p class="chapter-3-p">
-        Le Lorem Ipsum est simplement du fes, mais s'est aussi adasion dans des applications de mise en page de texte, comme Aldus PageMaker.
-      </p>
+    <div class="data">
+      <div class="left-block-chapter-3">
+        <h4>BERLIN OUEST</h4>
+        <div class="nombredata">
+          <p>Surface de la zone</p>
+          <h4>409 KM°2</h4>
+        </div>
+      </div>
+      <div class="right-block-chapter-3">
+          <h4>BERLIN EST</h4>
+      </div>
+      <div class="grosrond">
+        <p>12 000</p>
+        <p class="pute">Gardes sur le mur</p>
+      </div>
+      <div class="testbas">
+        <p>300</p>
+        <p class="pute1">Miradors</p>
+      </div>
+      <div class="test2haut">
+        <p>3,5 M</p>
+        <p class="pute1">De hauteur</p>
+      </div>
     </div>
-    <div class="chapter3-block-2">
-      <video class="chapter3-video" autoplay="autoplay" loop="loop">
-        <source src="/static/video.mp4"  type="video/mp4"  />
-        Your browser doesn't support video API
-      </video>
-    </div>
+
   </div>
 </template>
 

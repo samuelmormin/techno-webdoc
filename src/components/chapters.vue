@@ -12,10 +12,10 @@
         <button class="reveal-menu-button" @click="toggle">CHAPITRES</button>
       </div>
       <div class="chapter-navigation">
-        <router-link :to="{name: 'chapters.chapter1'}" class="chapter-navigation-button"><div>UNE SOCIETE STRICTE</div></router-link>
-        <router-link :to="{name: 'chapters.chapter2'}" class="chapter-navigation-button"><div>PEU DE LOISIRS</div></router-link>
-        <router-link :to="{name: 'chapters.chapter3'}" class="chapter-navigation-button"><div>PEU DE LOISIRS</div></router-link>
-        <router-link :to="{name: 'chapters.chapter4'}" class="chapter-navigation-button"><div>PEU DE LOISIRS</div></router-link>
+        <router-link :to="{name: 'chapters.chapter1'}" class="chapter-navigation-button"><div>UN REVEIL DIFFICILE</div></router-link>
+        <router-link :to="{name: 'chapters.chapter2'}" class="chapter-navigation-button"><div>SE DIVERTIR</div></router-link>
+        <router-link :to="{name: 'chapters.chapter3'}" class="chapter-navigation-button"><div>DATA BERLIN</div></router-link>
+        <router-link :to="{name: 'chapters.chapter4'}" class="chapter-navigation-button"><div>UNE VISION COMUNE</div></router-link>
         <router-link :to="{name: '{{nextLink}}'}" class="next-chapter">SUITE</router-link>
       </div>
     </div>

@@ -1,14 +1,13 @@
 <template>
   <div class="container-full">
-      <h1 class="chapter-4-title">
-        LIBERATION
-      </h1>
-      <p class="chapter-4-p">
-        Le Lorem Ipsum est simplement du fes, mais s'est aussi adasion dans des applications de mise en page de texte, comme Aldus PageMaker.
-      </p>
-      <p class="chapter-4-p">
-        Le Lorem Ipsum est simplement du fes, mais s'est aussi adasion dans des applications de mise en page de texte, comme Aldus PageMaker.
-      </p>
+    <div class="video">
+      <video class="video-background1" autoplay="autoplay" loop="loop">
+        <source src="/static/music-berlin.mp4"  type="video/mp4"  />
+        Your browser doesn't support video API
+      </video>
+      <h4>UNE VISION COMMUNE</h4>
+      <p>Les deux parties de la ville sont rythmées par ce nouveau style musical grandissant. Les gens se rejoignent dans la musique malgré quelques différences de vie. Les inégalités s’estompent face à la musique.</p>
+    </div>
   </div>
 </template>
 

@@ -1,6 +1,11 @@
 <template>
   <transition name="fade">
     <div>
+      <div class="video">
+        <div class="video-background">
+          <img src="static/images/accueil.jpg" alt="">
+        </div>
+      </div>
       <div class="landingTitle" v-if="visible">
         <h1 class="intro-h1">TECHNO</h1>
         <p class="intro-p">AU COEUR DE BERLIN</p>
@@ -11,11 +16,6 @@
       autoplay
       loop
       ></audio>
-      <div class="video">
-        <div class="video-background">
-          <img src="static/images/accueil.jpg" alt="">
-        </div>
-      </div>
     </div>
   </transition>
 </template>
