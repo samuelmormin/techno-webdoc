@@ -6,12 +6,11 @@
         src="/static/kalifa.mp3"
         autoplay
         loop
-        controls
-        muted
+        ref="audioPlayed"
         ></audio>
-        <button class="player-button">
+        <button class="player-button" v-on:click="switchState">
+          <img src="/static/images/play-button.svg" class="audio-player-button" alt="">
         </button>
-        <!--<img :src="'/src/assets/img/' + play-button.svg" alt="">-->
         <div class="ratio-container">
           <div class="ratio-bar"></div>
         </div>
@@ -54,8 +53,15 @@
       }
     },
     methods: {
-      toggled: function () {
-        this.displayed = !this.displayed
+      switchState: function () {
+        var music = this.$refs.audioPlayed
+        if (music.paused) {
+          music.play()
+          console.log('play')
+        } else {
+          music.pause()
+          console.log(music.currentTime)
+        }
       },
       playFile (file, index) {
         var music = this.$refs.audio[index]

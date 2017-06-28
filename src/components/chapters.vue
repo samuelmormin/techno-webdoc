@@ -1,6 +1,5 @@
 <template>
   <div class="chapters-wrapper">
-    <img v-bind:src="imgPath" alt="">
     <router-view></router-view>
     <div class="chapters-nav-container">
       <div class="chapters-menu">
