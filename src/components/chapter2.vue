@@ -52,6 +52,17 @@
         displayed: false
       }
     },
+//    mounted () {
+//      //let lethargy = new Lethargy()
+//      let _this = this
+//      window.addEventListener('mouseWheel', (e) => {
+//        e.preventDefault()
+//        e.stopPropagation()
+//        if (lethargy.check(e) === 1) {
+//          _this.$router.push('chapters.chapter3')
+//        }
+//      })
+//    },
     methods: {
       switchState: function () {
         var music = this.$refs.audioPlayed
