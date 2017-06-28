@@ -1,5 +1,6 @@
 <template>
   <div class="chapters-wrapper">
+    <img v-bind:src="imgPath" alt="">
     <router-view></router-view>
     <div class="chapters-nav-container">
       <div class="chapters-menu">
@@ -16,7 +17,7 @@
         <router-link :to="{name: 'chapters.chapter2'}" class="chapter-navigation-button"><div>PEU DE LOISIRS</div></router-link>
         <router-link :to="{name: 'chapters.chapter3'}" class="chapter-navigation-button"><div>PEU DE LOISIRS</div></router-link>
         <router-link :to="{name: 'chapters.chapter4'}" class="chapter-navigation-button"><div>PEU DE LOISIRS</div></router-link>
-        <router-link :to="{name: 'chapters.chapter4'}" class="chapter-navigation-button"><div>PEU DE LOISIRS</div></router-link>
+        <router-link :to="{name: '{{nextLink}}'}" class="next-chapter">SUITE</router-link>
       </div>
     </div>
     <video class="chapters-video-background" autoplay="autoplay" loop="loop">
@@ -32,7 +33,8 @@
     name: 'chapter1',
     data () {
       return {
-        visible: false
+        visible: false,
+        imgPath: '/Applications/MAMP/htdocs/techno-webdoc/src/assets/img/play-button.svg'
       }
     },
     methods: {

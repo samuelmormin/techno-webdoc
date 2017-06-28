@@ -12,6 +12,7 @@
 
 <script>
   export default {
-    name: 'chapter1'
+    name: 'chapter1',
+    nextLink: 'chapters.chapter1'
   }
 </script>
