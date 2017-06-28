@@ -20,13 +20,12 @@
         <router-link :to="{name: '{{nextLink}}'}" class="next-chapter">SUITE</router-link>
       </div>
     </div>
-    <video class="chapters-video-background" autoplay="autoplay" loop="loop">
-      <source src="/static/video.mp4"  type="video/mp4"  />
-      Your browser doesn't support video API
-    </video>
+    <div class="chapters-video-background">
+        <img src="static/images/mur.jpg" alt="">
+    </div>
   </div>
 </template>
- 
+
 
 <script>
   export default {

@@ -6,11 +6,16 @@
         <p class="intro-p">AU COEUR DE BERLIN</p>
         <router-link :to="{name: 'choseexperience'}" class="discover-button">DÉCOUVRIR</router-link>
       </div>
+      <audio
+      src="/static/intro.m4a"
+      autoplay
+      loop
+      controls
+      ></audio>
       <div class="video">
-        <video class="video-background" autoplay="autoplay" loop="loop">
-          <source src="/static/video.mp4"  type="video/mp4"  />
-          Your browser doesn't support video API
-        </video>
+        <div class="video-background">
+          <img src="static/images/accueil.jpg" alt="">
+        </div>
       </div>
     </div>
   </transition>
