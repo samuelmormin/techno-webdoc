@@ -1,14 +1,19 @@
 <template>
   <div class="container-full">
     <h1 class="chapter-1-title">
-      UNE SOCIETE STRICTE
+      UN REVEIL DIFFICILE
     </h1>
     <p class="chapter-1-p">
-      Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+      Suite à plusieurs années de Guerre Froide, l’Allemagne est ruinée et la ville de Berlin est répartie entre les différents partis gagnants. Berlin Est ou Berlin Ouest, la vie y est à refaire … reconstruction, remise en marche des commerces et surtout apprendre de nouveau à s’amuser. La société du nouveau Berlin devient actrice de sa reconstruction.
     </p>
+    <audio
+    src="/static/intro.m4a"
+    autoplay
+    loop
+    ></audio>
   </div>
 </template>
- 
+
 
 <script>
   export default {

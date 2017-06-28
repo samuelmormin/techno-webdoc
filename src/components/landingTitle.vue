@@ -10,7 +10,6 @@
       src="/static/intro.m4a"
       autoplay
       loop
-      controls
       ></audio>
       <div class="video">
         <div class="video-background">
