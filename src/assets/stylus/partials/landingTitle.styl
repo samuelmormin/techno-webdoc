@@ -1,0 +1,46 @@
+.landingTitle
+  position relative
+  margin 0 auto
+  z-index 6
+  width 100%
+  text-align center
+  font-family 'arial'
+  .intro-h1
+    display block
+    z-index 4
+    font-family 'franchise'
+    font-size 200px
+    color $white
+    width 100%
+    margin 0 auto
+    text-align center
+    line-height 180px
+    margin-top 200px
+    &:before
+      content '1989'
+      font-size 190px
+      color $pink
+      position absolute
+      z-index 2
+      opacity .5
+      top 0
+      transform translateX(30%) translateY(-50%)
+  .intro-p
+    display block
+    font-size 75px
+    color $white
+    width 100%
+    margin 0 auto
+    text-align center
+  .discover-button
+    display inline-block
+    border 1px solid $pink
+    padding 20px 40px
+    color $pink
+    font-size 16px
+    margin 0 auto
+    text-decoration none
+    transition all .5s ease
+    &:hover
+      background-color $pink
+      color $white

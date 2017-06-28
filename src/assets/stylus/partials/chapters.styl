@@ -1,0 +1,113 @@
+.chapter1
+  background-color red
+  color $white
+  font-size 40px
+.chapters-wrapper
+  width 100wh
+  height 100vh
+  background-color red
+  font-size 0
+  padding 0
+  .chapters-nav-container
+    position fixed
+    bottom 0
+    left 0
+    width 100%
+    height auto
+    background linear-gradient(rgba(0,0,0,.0), black)
+    font-size 0
+    z-index 2
+    text-align center
+    &:after
+      clear both
+    .chapters-menu
+      display inline-block
+      width auto
+      height auto
+      color $white
+      margin 0 auto
+      .chapters-nav-ul
+        display block
+        font-family 'franchise'
+        font-size 14px
+        color $white
+        padding 10px 40px
+        text-decoration none
+        list-style none
+        background-color rgba(225, 34, 106,.7)
+        margin 0 auto
+        li
+          width auto
+          height auto
+          margin 0 auto
+          padding 10px 0
+          text-decoration none
+          a
+            text-decoration none
+            color $white
+            font-size 20px
+    .chapter-navigation
+      display inline-block
+      width 900px
+      height 80px
+      vertical-align bottom
+      text-align left
+      margin-left 20px
+      .chapter-navigation-button
+        position relative
+        display inline-block
+        vertical-align top
+        background none
+        width 40px
+        height 40px
+        border-radius 100%
+        border 2px solid $pink
+        margin-right 230px
+        &:after
+          content''
+          position absolute
+          width 215px
+          height 2px
+          left 0
+          transform translateX(49px) translateY(20px)
+          background-color rgba(255, 255, 255, .5)
+        &:last-child
+          margin-right 0
+          &:last-child:after
+            content''
+            display none
+        div
+          position absolute
+          color $white
+          width 200px
+          transform translateX(-10px) translateY(55px)
+          font-size 16px
+          font-family 'franchise'
+          text-align left
+    .reveal-menu-button
+      display block
+      width 180px
+      height 80px
+      color $pink
+      background none
+      border none
+      font-family 'franchise'
+      font-size 20px
+      margin 0 auto
+      padding 0 0 40px 0
+      &:after
+        content''
+        position absolute
+        bottom 30px
+        transform translateX(-47px)
+        background-color $pink
+        width 30px
+        height 4px
+  .chapters-video-background
+    position fixed
+    top 0
+    right 0
+    bottom 0
+    left 0
+    object-fit cover
+    z-index 1
