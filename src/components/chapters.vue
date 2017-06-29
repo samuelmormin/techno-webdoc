@@ -3,7 +3,7 @@
     <transition name="bounce" mode="out-in">
       <router-view></router-view>
     </transition>
-    <div class="chapters-nav-container">
+    <div class="chapters-nav-container" v-if="chapter1">
       <div class="chapters-menu">
         <ul class="chapters-nav-ul" v-if="visible">
           <li><router-link :to="{name: 'chapters.chapter1'}" class="experience-choice-button">CHAPITRE 1</router-link></li>
@@ -14,7 +14,7 @@
         <button class="reveal-menu-button" @click="toggle">CHAPITRES</button>
       </div>
       <div class="chapter-navigation">
-        <div v-if="chapter1">
+        <div>
           <router-link :to="{name: 'chapters.chapter1'}" class="chapter-navigation-button"><div>UN REVEIL DIFFICILE</div></router-link>
           <router-link :to="{name: 'chapters.chapter2'}" class="chapter-navigation-button"><div>SE DIVERTIR</div></router-link>
           <router-link :to="{name: 'chapters.chapter3'}" class="chapter-navigation-button"><div>DATA BERLIN</div></router-link>
@@ -42,7 +42,8 @@
     data () {
       return {
         visible: false,
-        chapter1: true
+        chapter1: true,
+        chapter2Menu: false
       }
     },
     methods: {
@@ -50,7 +51,9 @@
         this.visible = !this.visible
       },
       hideChapter1: function () {
-        this.chapter1 = !this.chapter1
+        let _this = this
+        this.chapter1 = this.chapter1
+        setTimeout(function () { _this.$router.push('/chapter2Landing') }, 1000)
       }
     }
   }
