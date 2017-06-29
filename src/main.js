@@ -82,6 +82,31 @@ const router = new VueRouter({
       component: require('./components/page14.vue')
     },
     {
+      path: '/page15',
+      name: 'chapters.page15',
+      component: require('./components/page15.vue')
+    },
+    {
+      path: '/page17',
+      name: 'chapters.page17',
+      component: require('./components/page17.vue')
+    },
+    {
+      path: '/page18',
+      name: 'chapters.page18',
+      component: require('./components/page18.vue')
+    },
+    {
+      path: '/page20',
+      name: 'chapters.page20',
+      component: require('./components/page20.vue')
+    },
+    {
+      path: '/page21',
+      name: 'chapters.page21',
+      component: require('./components/page21.vue')
+    },
+    {
       path: '/chapter2Landing',
       name: 'chapters.chapter2',
       component: require('./components/chapter2Landing.vue')
