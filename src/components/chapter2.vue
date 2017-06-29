@@ -47,7 +47,8 @@
     name: 'chapter2',
     data () {
       return {
-        displayed: false
+        displayed: false,
+        playing: true
       }
     },
     mounted () {
@@ -57,6 +58,10 @@
       switchState: function () {
         var music = this.$refs.audioPlayed
         var bar = this.$refs.bar
+        window.setInterval(function () {
+          var ratio = music.currentTime / music.duration
+          bar.style.width = (ratio * 200) + 'px'
+        }, 50)
         if (music.paused) {
           music.play()
           console.log('play')

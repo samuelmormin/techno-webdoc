@@ -4,12 +4,16 @@
       <div class="left-block-chapter-3">
         <h4>BERLIN OUEST</h4>
         <div class="nombredata">
-          <p>Surface de la zone</p>
-          <h4>409 KM°2</h4>
+        </div>
+        <div class="nombredata1">
         </div>
       </div>
       <div class="right-block-chapter-3">
           <h4>BERLIN EST</h4>
+          <div class="nombredata2">
+          </div>
+          <div class="nombredata3">
+          </div>
       </div>
       <div class="grosrond">
         <p>12 000</p>
