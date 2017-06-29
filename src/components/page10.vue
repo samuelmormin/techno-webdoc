@@ -2,6 +2,7 @@
   <div class="container-full  radio">
     <div class="half-block-1">
       <div class="audio-player center-player">
+        <p class="audio-title">Temoignage</p>
         <audio
         src="/static/techno-temoin.mp3"
         autoplay
@@ -16,12 +17,13 @@
         </div>
       </div>
       <div class="audio-player">
+        <p class="audio-title">Tanith @ Tresor - May 1991</p>
         <audio
-        src="/static/kalifa.mp3"
+        src="/static/tresor.mp3"
         loop
-        ref="audioPlayed"
+        ref="audioPlayed1"
         ></audio>
-        <button class="player-button" v-on:click="switchState">
+        <button class="player-button" v-on:click="switchState1">
           <img src="/static/images/play-button.svg" class="audio-player-button" alt="">
         </button>
         <div class="ratio-container">
@@ -52,6 +54,25 @@
       // let lethargy = new Lethargy()
     },
     methods: {
+      switchState1: function () {
+        var music1 = this.$refs.audioPlayed1
+        var bar1 = this.$refs.bar1
+        window.setInterval(function () {
+          var ratio = music1.currentTime / music1.duration
+          bar1.style.width = (ratio * 200) + 'px'
+        }, 50)
+        if (music1.paused) {
+          music1.play()
+          console.log('play')
+          window.setInterval(function () {
+            var ratio = music1.currentTime / music1.duration
+            bar1.style.width = (ratio * 200) + 'px'
+          }, 50)
+        } else {
+          music1.pause()
+          // console.log(music.currentTime)
+        }
+      },
       switchState: function () {
         var music = this.$refs.audioPlayed
         var bar = this.$refs.bar
@@ -70,21 +91,6 @@
           music.pause()
           // console.log(music.currentTime)
         }
-      },
-      playFile (file, index) {
-        var music = this.$refs.audio[index]
-        if (music.paused) {
-          music.play()
-          console.log('play')
-        } else {
-          music.pause()
-          console.log(music.currentTime)
-        }
-      },
-      stopFile (file, index) {
-        var music = this.$refs.audio[index]
-        music.pause()
-        music.currentTime = 0
       },
       toggled: function () {
         this.displayed = !this.displayed

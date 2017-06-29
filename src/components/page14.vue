@@ -2,11 +2,12 @@
   <div class="container-full">
     <div class="video">
       <video class="video-background1" autoplay="autoplay" loop="loop">
-        <source src="/static/music-berlin.mp4"  type="video/mp4"  />
+        <source src="/static/ensemble.mp4"  type="video/mp4"  />
         Your browser doesn't support video API
       </video>
-      <h4>UNE VISION COMMUNE</h4>
-      <p>Les deux parties de la ville sont rythmées par ce nouveau style musical grandissant. Les gens se rejoignent dans la musique malgré quelques différences de vie. Les inégalités s’estompent face à la musique.</p>
+      <h4>NI EST, NI OUEST</h4>
+      <p>Après une séparation telle que celle du « Rideau de Fer » la remise en commun de la vie n’est pas toujours évidente. Est ? Ouest ? Non … juste une jeunesse qui cherche à se libérer de l’emprise que peut avoir la société sur elle.
+</p>
     </div>
   </div>
 </template>
