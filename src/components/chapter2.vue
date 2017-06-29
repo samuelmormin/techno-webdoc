@@ -1,9 +1,9 @@
 <template>
   <div class="container-full">
     <div class="half-block-1">
-      <div class="audio-player">
-        <audio 
-        src="/static/kalifa.mp3"
+      <div class="audio-player center-player">
+        <audio
+        src="/static/epoque-temoin.mp3"
         autoplay
         loop
         ref="audioPlayed"
@@ -17,28 +17,26 @@
       </div>
     </div>
     <div class="half-block-2">
-      <h1 class="chapter-2-title">PEU DE LOISIRS</h1>
+      <h1 class="chapter-2-title">SE DIVERTIR A TOUT PRIX </h1>
       <div class="more-infos-block">
         <div class="more-infos-content" v-if="displayed">
-          <h2>LA TECHNO EST UNE HISTOIRE DE COEUR</h2>
+          <h2>SE DIVERTIR MALGRE TOUT</h2>
           <p>
-            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. 
+            La population Berlinoise est répartie entre Berlin Est et Berlin Ouest. Dirigée par les Soviétique d’un côté et les Occidentaux de l’autres, la vie y est différente.
+            A Berlin Est, les restrictions sont nombreuses et les divertissements sont limités. Le régime est fort et la propagande militaire est omniprésente. Le gouvernement traque sans relâche certaines formes de divertissements comme le Rock’n’Roll ou les musiques non politiques. Les jeunes restent forts face à ces interdictions en essayant de garder une vie la plus normale possible : danser, sortir, chanter …
           </p>
           <p>
-            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. 
+            A Berlin Ouest, même si les régimes sont plus occidentaux et favorisent un développement rapide sur le plan technologique et sociétal, des familles restent séparées par le Rideau de Fer. La consommation et la vie à l’américaine se développent ce qui apportent notamment des nouveautés artistiques : musique et danse. Les disquaires se munissent de CD avec les meilleurs DJs de techno Nord-Américains comme Jeff Miles, DJ Dilla et Kevin Saunderson.
           </p>
           <p>
-            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. 
+            Ce sont ces CD que les nouveaux DJs de techno viendront récupérer lors de l’ouverture du mur avant de retourner à l’Est dans les zones désaffectées pour faire la fête.
           </p>
             <button class="chapter2-more-infos-close" @click="toggled">X</button>
         </div>
         <button class="chapter2-more-infos" @click="toggled">En savoir plus</button>
       </div>
       <p class="chapter-2-p">
-        Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. 
-        <br>
-        <br>
-        Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour rque survivre cinq siècles, mais s'est aussi adaptén'en soit modifnnées 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+        L’appel de la liberté reste constant tout au long des 28 ans de l’histoire du mur. La population a besoin de respirer et de retrouver espoir. Cette ville particulière attire malgré les restrictions … De s jeunes venus des quatre coins du globe découvrent la ville et facilitent l’arrivée de nouveaux divertissements.
       </p>
     </div>
   </div>
@@ -85,6 +83,9 @@
         var music = this.$refs.audio[index]
         music.pause()
         music.currentTime = 0
+      },
+      toggled: function () {
+        this.displayed = !this.displayed
       }
     }
   }
