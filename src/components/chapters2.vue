@@ -1,10 +1,11 @@
 <template>
   <div>
-    <router-link :to="{name: 'chapters.chapter21'}" class="chapter-navigation-button"><div>UNE RENAISSANCE MUSICALE</div></router-link>
+    <router-link :to="{name: 'chapters.chapter21'}" class="chapter-navigation-button"><div>Mélange de tout le monde</div></router-link>
     <router-link :to="{name: 'chapters.chapter22'}" class="chapter-navigation-button"><div>UN NOUVEAU STYLE</div></router-link>
     <router-link :to="{name: 'chapters.chapter23'}" class="chapter-navigation-button"><div>PAS CHER ET EFFICACE</div></router-link>
     <router-link :to="{name: 'chapters.chapter24'}" class="chapter-navigation-button"><div>UN REGROUPEMENT PARTAGE</div></router-link>
     <router-link :to="{name: '{{nextLink}}'}" class="next-chapter">SUITE</router-link>
+    <button @click="changeMenu">SUITE</button>
   </div>
 </template>
 

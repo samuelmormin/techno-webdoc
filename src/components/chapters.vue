@@ -23,6 +23,33 @@
           <button @click="hideChapter1">SUITE</button>
         </div>
       </div>
+      <div class="chapter-navigation">
+        <div>
+          <router-link :to="{name: 'chapters.chapter1'}" class="chapter-navigation-button"><div>UNE RENAISSANCE MUSICALE</div></router-link>
+          <router-link :to="{name: 'chapters.chapter2'}" class="chapter-navigation-button"><div>PAS CHER ET EFFICACE</div></router-link>
+          <router-link :to="{name: 'chapters.chapter3'}" class="chapter-navigation-button"><div>UN REGROUPEMENT PARTAGE</div></router-link>
+          <router-link :to="{name: 'chapters.page6'}" class="next-chapter" v-on:click="hideChapter1 = !hideChapter1">SUITE</router-link>
+          <button @click="hideChapter1">SUITE</button>
+        </div>
+      </div>
+      <div class="chapter-navigation">
+        <div>
+          <router-link :to="{name: 'chapters.page6'}" class="chapter-navigation-button"><div>NI EST, NI OUEST</div></router-link>
+          <router-link :to="{name: 'chapters.page8'}" class="chapter-navigation-button"><div>OUVERTURE ET LIBERTÉ</div></router-link>
+          <router-link :to="{name: 'chapters.page6'}" class="next-chapter" v-on:click="hideChapter1 = !hideChapter1">SUITE</router-link>
+          <button @click="hideChapter1">SUITE</button>
+        </div>
+      </div>
+      <div class="chapter-navigation">
+        <div>
+          <router-link :to="{name: 'chapters.page6'}" class="chapter-navigation-button"><div>PLUS QU'UN BUSINESS</div></router-link>
+          <router-link :to="{name: 'chapters.page8'}" class="chapter-navigation-button"><div>CLUB ET SELECTION</div></router-link>
+          <router-link :to="{name: 'chapters.page8'}" class="chapter-navigation-button"><div>ET AUJOURD'HUI</div></router-link>
+          <router-link :to="{name: 'chapters.page8'}" class="chapter-navigation-button"><div>PAGE FINALE</div></router-link>
+          <router-link :to="{name: 'chapters.page6'}" class="next-chapter" v-on:click="hideChapter1 = !hideChapter1">SUITE</router-link>
+          <button @click="hideChapter1">SUITE</button>
+        </div>
+      </div>
     </div>
     <div class="chapters-video-background">
         <img src="static/images/mur.jpg" alt="">
@@ -43,6 +70,7 @@
       return {
         visible: false,
         chapter1: true,
+        chapter1Dj: true,
         chapter2Menu: false
       }
     },
