@@ -12,7 +12,7 @@
           <img src="/static/images/play-button.svg" class="audio-player-button" alt="">
         </button>
         <div class="ratio-container">
-          <div class="ratio-bar"></div>
+          <div class="ratio-bar" ref="bar"></div>
         </div>
       </div>
     </div>
@@ -52,26 +52,23 @@
         displayed: false
       }
     },
-//    mounted () {
-//      //let lethargy = new Lethargy()
-//      let _this = this
-//      window.addEventListener('mouseWheel', (e) => {
-//        e.preventDefault()
-//        e.stopPropagation()
-//        if (lethargy.check(e) === 1) {
-//          _this.$router.push('chapters.chapter3')
-//        }
-//      })
-//    },
+    mounted () {
+      // let lethargy = new Lethargy()
+    },
     methods: {
       switchState: function () {
         var music = this.$refs.audioPlayed
+        var bar = this.$refs.bar
         if (music.paused) {
           music.play()
           console.log('play')
+          window.setInterval(function () {
+            var ratio = music.currentTime / music.duration
+            bar.style.width = (ratio * 200) + 'px'
+          }, 50)
         } else {
           music.pause()
-          console.log(music.currentTime)
+          // console.log(music.currentTime)
         }
       },
       playFile (file, index) {

@@ -59,8 +59,8 @@
         display inline-block
         vertical-align top
         background none
-        width 40px
-        height 40px
+        width 20px
+        height 20px
         border-radius 100%
         border 2px solid $pink
         margin-right 160px
@@ -69,22 +69,37 @@
           position absolute
           width 140px
           height 2px
-          left 0
-          transform translateX(49px) translateY(20px)
+          transform translateX(32px) translateY(10px)
           background-color rgba(255, 255, 255, .5)
         &:last-child
           margin-right 0
           &:last-child:after
             content''
             display none
+            animation none
         div
           position absolute
           color $white
           width 200px
-          transform translateX(-10px) translateY(55px)
+          transform translateX(-10px) translateY(45px)
           font-size 16px
           font-family 'franchise'
           text-align left
+      .router-link-exact-active
+        border 2px solid $white
+        transition all 0.5s ease
+        &:before
+          content''
+          position absolute
+          vertical-align top
+          background none
+          width 20px
+          height 20px
+          border-radius 100%
+          border 2px solid $pink
+          margin-right 160px
+          transform translateX(-2px) translateY(-2px)
+          animation pulse 2s ease-out 0s infinite
     .reveal-menu-button
       display block
       width 180px
@@ -104,6 +119,7 @@
         background-color $pink
         width 30px
         height 4px
+        opacity .6
   .chapters-video-background
     position fixed
     top 0
@@ -124,7 +140,7 @@
     font-size 25px
     font-family 'franchise'
     text-decoration none
-    transform translateY(12px)
+    transform translateY(3px)
     &:after
       content'>'
       display block
@@ -133,3 +149,33 @@
       width 50px
       height auto
       transform translateX(40px) translateY(-35px)
+.suite
+  display block
+  width auto
+  height 50px
+  border none
+  background-color red
+  z-index 6
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: translateX(-2px) translateY(-2px) scale(1.2,1.2);
+  }
+  20% {
+    opacity: 0.8;
+    transform translateX(-2px) translateY(-2px) scale(2,2);
+  }
+  40% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(3,3);
+    opacity: 0;
+  }
+}
