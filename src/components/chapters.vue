@@ -52,7 +52,7 @@
       },
       hideChapter1: function () {
         let _this = this
-        this.chapter1 = this.chapter1
+        this.chapter1 = !this.chapter1
         setTimeout(function () { _this.$router.push('/chapter2Landing') }, 1000)
       }
     }

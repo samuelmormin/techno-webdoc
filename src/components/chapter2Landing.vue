@@ -2,9 +2,9 @@
   <transition name="fade">
     <div>
       
-      <div class="landingTitle" v-if="visible">
-        <h1 class="intro-h1">UNE JEUNESSE, UNE SOIREE</h1>
-        <p class="intro-p">AU COEUR DE BERLIN</p>
+      <div class="landingTitle">
+        <h1 class="chapter-generic-title">UNE JEUNESSE, UNE SOIREE</h1>
+        <p class="chapter-generic-p">Après la chute du mur, les communications sur radio et la mise en forme d’un lieu il ne reste plus qu’à faire la fête. Les jeunes, de tous bords et de tous partis se rassemblent et cherchent une forme de liberté totale.</p>
         <router-link :to="{name: 'chapters.chapter2'}" class="discover-button">DÉCOUVRIR</router-link>
       </div>
       <audio
