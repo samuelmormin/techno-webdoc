@@ -42,6 +42,26 @@ const router = new VueRouter({
       component: require('./components/chapter4.vue')
     },
     {
+      path: '/page7',
+      name: 'chapters.page7',
+      component: require('./components/page7.vue')
+    },
+    {
+      path: '/page8',
+      name: 'chapters.page8',
+      component: require('./components/page8.vue')
+    },
+    {
+      path: '/page9',
+      name: 'chapters.page9',
+      component: require('./components/page9.vue')
+    },
+    {
+      path: '/page10',
+      name: 'chapters.page10',
+      component: require('./components/page10.vue')
+    },
+    {
       path: '/page6',
       name: 'chapters.page6',
       component: require('./components/page6.vue')
