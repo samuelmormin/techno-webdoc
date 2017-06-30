@@ -3,7 +3,9 @@
     <transition name="bounce" mode="out-in">
       <router-view></router-view>
     </transition>
-    <div class="chapters-nav-container" v-if="chapter1">
+    <button class="experience-choice-button-dj" @click="displayChapter1DJb" v-if="djButton">DECOUVRIR L'HISTOIRE</button>
+    <button class="experience-choice-button-societe" @click="displayChapter1societe" v-if="djButton">DECOUVRIR L'HISTOIRE</button>
+    <div class="chapters-nav-container">
       <div class="chapters-menu">
         <ul class="chapters-nav-ul" v-if="visible">
           <li><router-link :to="{name: 'chapters.chapter1'}" class="experience-choice-button">CHAPITRE 1</router-link></li>
@@ -13,41 +15,37 @@
         </ul>
         <button class="reveal-menu-button" @click="toggle">CHAPITRES</button>
       </div>
-      <div class="chapter-navigation">
+      <div class="chapter-navigation" v-if="chapter1S">
         <div>
           <router-link :to="{name: 'chapters.chapter1'}" class="chapter-navigation-button"><div>UN REVEIL DIFFICILE</div></router-link>
           <router-link :to="{name: 'chapters.chapter2'}" class="chapter-navigation-button"><div>SE DIVERTIR</div></router-link>
           <router-link :to="{name: 'chapters.chapter3'}" class="chapter-navigation-button"><div>DATA BERLIN</div></router-link>
           <router-link :to="{name: 'chapters.chapter4'}" class="chapter-navigation-button"><div>UNE VISION COMUNE</div></router-link>
-          <router-link :to="{name: 'chapters.page6'}" class="next-chapter" v-on:click="hideChapter1 = !hideChapter1">SUITE</router-link>
-          <button @click="hideChapter1">SUITE</button>
+          <button @click="displayMenu22" class="next-chapter">SUITE</button>
         </div>
       </div>
-      <div class="chapter-navigation">
-        <div>
+      <div class="chapter-navigation" v-if="chapter1Dj">
+        <div class="dj">
           <router-link :to="{name: 'chapters.page6'}" class="chapter-navigation-button"><div>UNE RENAISSANCE MUSICALE</div></router-link>
           <router-link :to="{name: 'chapters.page8'}" class="chapter-navigation-button"><div>PAS CHER ET EFFICACE</div></router-link>
           <router-link :to="{name: 'chapters.page9'}" class="chapter-navigation-button"><div>UN REGROUPEMENT PARTAGE</div></router-link>
-          <router-link :to="{name: 'chapters.page6'}" class="next-chapter" v-on:click="hideChapter1 = !hideChapter1">SUITE</router-link>
-          <button @click="hideChapter1">SUITE</button>
+          <button @click="displayMenu2" class="next-chapter">SUITE</button>
         </div>
       </div>
-      <div class="chapter-navigation">
+      <div class="chapter-navigation" v-if="chapter2Menu">
         <div>
           <router-link :to="{name: 'chapters.page14'}" class="chapter-navigation-button"><div>NI EST, NI OUEST</div></router-link>
           <router-link :to="{name: 'chapters.page15'}" class="chapter-navigation-button"><div>OUVERTURE ET LIBERTE</div></router-link>
-          <router-link :to="{name: 'chapters.page6'}" class="next-chapter" v-on:click="hideChapter1 = !hideChapter1">SUITE</router-link>
-          <button @click="hideChapter1">SUITE</button>
+          <button @click="displayMenu3" class="next-chapter">SUITE</button>
         </div>
       </div>
-      <div class="chapter-navigation">
+      <div class="chapter-navigation" v-if="chapter3Menu">
         <div>
           <router-link :to="{name: 'chapters.page17'}" class="chapter-navigation-button"><div>PLUS QU'UN BUSINESS</div></router-link>
           <router-link :to="{name: 'chapters.page18'}" class="chapter-navigation-button"><div>CLUB ET SELECTION</div></router-link>
           <router-link :to="{name: 'chapters.page20'}" class="chapter-navigation-button"><div>ET AUJOURD'HUI</div></router-link>
           <router-link :to="{name: 'chapters.page21'}" class="chapter-navigation-button"><div>PAGE FINALE</div></router-link>
-          <router-link :to="{name: 'chapters.page6'}" class="next-chapter" v-on:click="hideChapter1 = !hideChapter1">SUITE</router-link>
-          <button @click="hideChapter1">SUITE</button>
+          <button @click="goIntro" class="next-chapter">INTRO</button>
         </div>
       </div>
     </div>
@@ -59,19 +57,15 @@
 
 
 <script>
-  import chapters2 from './chapters2.vue'
-  
   export default {
-    name: 'chapter1',
-    components: {
-      chapters2
-    },
     data () {
       return {
         visible: false,
-        chapter1: true,
-        chapter1Dj: true,
-        chapter2Menu: false
+        chapter1S: false,
+        chapter1Dj: false,
+        chapter2Menu: false,
+        chapter3Menu: false,
+        djButton: true
       }
     },
     methods: {
@@ -79,9 +73,36 @@
         this.visible = !this.visible
       },
       hideChapter1: function () {
-        let _this = this
+        // let _this = this
         this.chapter1 = !this.chapter1
-        setTimeout(function () { _this.$router.push('/chapter2Landing') }, 1000)
+      },
+      displayChapter1societe: function () {
+        let _this = this
+        setTimeout(function () { _this.$router.push('/chapitre1'); _this.chapter1S = !_this.chapter1S; _this.djButton = !_this.djButton }, 500)
+      },
+      displayChapter1DJ: function () {
+        let _this = this
+        setTimeout(function () { _this.$router.push('/page6'); _this.chapter1Dj = !_this.chapter1Dj; _this.chapter1S = !_this.chapter1S }, 500)
+      },
+      displayChapter1DJb: function () {
+        let _this = this
+        setTimeout(function () { _this.$router.push('/page6'); _this.djButton = !_this.djButton; _this.chapter1Dj = !_this.chapter1Dj }, 500)
+      },
+      displayMenu22: function () {
+        let _this = this
+        setTimeout(function () { _this.$router.push('/chapter2Landing'); _this.chapter1S = !_this.chapter1S; _this.chapter1Dj = !_this.chapter1Dj }, 500)
+      },
+      displayMenu2: function () {
+        let _this = this
+        setTimeout(function () { _this.$router.push('/chapter2Landing'); _this.chapter2Menu = !_this.chapter2Menu; _this.chapter1Dj = !_this.chapter1Dj }, 500)
+      },
+      displayMenu3: function () {
+        let _this = this
+        setTimeout(function () { _this.$router.push('/page17'); _this.chapter3Menu = !_this.chapter3Menu; _this.chapter2Menu = !_this.chapter2Menu }, 500)
+      },
+      goIntro: function () {
+        let _this = this
+        setTimeout(function () { _this.$router.push('/landingTitle'); _this.chapter3Menu = !_this.chapter3Menu }, 500)
       }
     }
   }

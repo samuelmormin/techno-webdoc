@@ -2,8 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Vuex from 'vuex'
 
 Vue.config.productionTip = false
+
+Vue.use(Vuex)
 
 Vue.use(VueRouter)
 const router = new VueRouter({
@@ -13,18 +16,28 @@ const router = new VueRouter({
     component: require('./components/landingTitle.vue')
   },
   {
-    path: '/choseexperience',
-    name: 'choseexperience',
-    component: require('./components/choseexperience.vue')
+    path: '/landingTitle',
+    name: 'intro',
+    component: require('./components/landingTitle.vue')
+  },
+  {
+    path: '/chapterone',
+    name: 'chapterone',
+    component: require('./components/chapter1Landing.vue')
   },
   {
     path: '/chapters',
     name: 'chapters',
     component: require('./components/chapters.vue'),
     children: [{
-      path: 'chapitre1',
+      path: '/chapitre1',
       name: 'chapters.chapter1',
       component: require('./components/chapter1.vue')
+    },
+    {
+      path: '/choseexperience',
+      name: 'choseexperience',
+      component: require('./components/choseexperience.vue')
     },
     {
       path: 'chapitre2',

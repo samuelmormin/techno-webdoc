@@ -51,8 +51,7 @@
         playing: true
       }
     },
-    mounted () {
-      // let lethargy = new Lethargy()
+    computed: {
     },
     methods: {
       switchState: function () {
@@ -73,21 +72,6 @@
           music.pause()
           // console.log(music.currentTime)
         }
-      },
-      playFile (file, index) {
-        var music = this.$refs.audio[index]
-        if (music.paused) {
-          music.play()
-          console.log('play')
-        } else {
-          music.pause()
-          console.log(music.currentTime)
-        }
-      },
-      stopFile (file, index) {
-        var music = this.$refs.audio[index]
-        music.pause()
-        music.currentTime = 0
       },
       toggled: function () {
         this.displayed = !this.displayed
