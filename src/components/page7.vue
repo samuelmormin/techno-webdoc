@@ -1,5 +1,5 @@
 <template>
-  <div class="container-full">
+  <div class="container-full chapter3bg">
     <div class="half-block-1">
       <div class="audio-player center-player">
         <audio

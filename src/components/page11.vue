@@ -36,6 +36,7 @@
     <p class="chapter-1-p">
       Avec près de 25 000 bâtiments désaffectés Berlin Est est un terrain de jeu à grande échelle. Quelques jours d’inactivité dans l’un d’eux et c’est au pied de biche que l’on rentre pour occuper l’espace. Quelques éléments techniques, de grands draps noirs pour camoufler les murs et tous sont prêts pour une soirée de plusieurs jours.
     </p>
+    <router-link :to="{name: 'chapters.page12'}" class="chapter2-more-infos-11">EN SAVOIR PLUS</router-link>
   </div>
 </template>
 

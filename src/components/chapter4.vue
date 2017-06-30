@@ -6,7 +6,7 @@
         Your browser doesn't support video API
       </video>
       <h4>UNE VISION COMMUNE</h4>
-      <p>Les festivals ouverts au grand public sont de plus en plus nombreux, Allemagne, Espagne, Manchester … la jeunesse de tous les pays a adopté la techno.</p>
+      <p>Les deux parties de la ville sont rythmées par ce nouveau style musical grandissant. Les gens se rejoignent dans la musique malgré quelques différences de vie. Les inégalités s’estompent face à la musique.</p>
     </div>
   </div>
 </template>

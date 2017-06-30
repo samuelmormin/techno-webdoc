@@ -6,12 +6,14 @@
     <button class="experience-choice-button-dj" @click="displayChapter1DJb" v-if="djButton">DECOUVRIR L'HISTOIRE</button>
     <button class="experience-choice-button-societe" @click="displayChapter1societe" v-if="djButton">DECOUVRIR L'HISTOIRE</button>
     <div class="chapters-nav-container">
-      <div class="chapters-menu">
+      <div class="chapters-menu" v-if="navChap">
         <ul class="chapters-nav-ul" v-if="visible">
-          <li><router-link :to="{name: 'chapters.chapter1'}" class="experience-choice-button">CHAPITRE 1</router-link></li>
-          <li><router-link :to="{name: 'chapter/02'}" class="experience-choice-button">CHAPITRE 2</router-link></li>
-          <li><router-link :to="{name: 'chapter/03'}" class="experience-choice-button">CHAPITRE 3</router-link></li>
-          <li><router-link :to="{name: 'chapter/04'}" class="experience-choice-button">CHAPITRE 4</router-link></li>
+          <li><router-link :to="{name: 'chapterone'}" class="experience-choice-button">1. DEUX PARTIES, UNE VISION</router-link></li>
+          <li><button @click="goMenuChap1">1. DEUX PARTIES, UNE VISION</button></li>
+          <li><button @click="goMenuChap2">2. UNE JEUNESSE, UNE SOIREE</button></li>
+          <li><button @click="goMenuChap2">3. UNE EVOLUTION</button></li>
+          <li><router-link :to="{name: 'chapters.chapter2'}" class="experience-choice-button">2. UNE JEUNESSE, UNE SOIREE</router-link></li>
+          <li><router-link :to="{name: 'chapters.page16'}" class="experience-choice-button">3. UNE EVOLUTION</router-link></li>
         </ul>
         <button class="reveal-menu-button" @click="toggle">CHAPITRES</button>
       </div>
@@ -65,7 +67,8 @@
         chapter1Dj: false,
         chapter2Menu: false,
         chapter3Menu: false,
-        djButton: true
+        djButton: true,
+        navChap: false
       }
     },
     methods: {
@@ -98,11 +101,15 @@
       },
       displayMenu3: function () {
         let _this = this
-        setTimeout(function () { _this.$router.push('/page17'); _this.chapter3Menu = !_this.chapter3Menu; _this.chapter2Menu = !_this.chapter2Menu }, 500)
+        setTimeout(function () { _this.$router.push('/page16'); _this.chapter3Menu = !_this.chapter3Menu; _this.chapter2Menu = !_this.chapter2Menu }, 500)
       },
       goIntro: function () {
         let _this = this
         setTimeout(function () { _this.$router.push('/landingTitle'); _this.chapter3Menu = !_this.chapter3Menu }, 500)
+      },
+      goMenuChap2: function () {
+        let _this = this
+        setTimeout(function () { _this.$router.push('/chapter2Landing'); _this.chapter3Menu = !_this.chapter3Menu; _this.chapter2Menu = !_this.chapter2Menu }, 500)
       }
     }
   }

@@ -144,6 +144,8 @@
     transform translateY(3px)
     background-color rgba(0,0,0,0)
     border none
+    outline none
+    cursor pointer
     &:after
       content'>'
       display block
@@ -171,9 +173,12 @@
   text-decoration none
   transition all .5s ease
   letter-spacing: 2px
+  cursor pointer
+  outline none
   &:hover
     background-color $pink
     color $white
+    cursor pointer
 .experience-choice-button-societe
   font-family 'franchise'
   background-color rgba(0,0,0,0)
@@ -191,9 +196,12 @@
   text-decoration none
   transition all .5s ease
   letter-spacing: 2px
+  cursor pointer
+  outline none
   &:hover
     background-color $pink
     color $white
+    cursor pointer
 .suite
   display block
   width auto
@@ -202,7 +210,30 @@
   background-color red
   z-index 6
   border 0px
-  outline-style none
+  outline none
+  cursor pointer
+.prev-chapter
+    display inline-block
+    width auto
+    height 68px
+    color $pink
+    z-index 15
+    font-size 25px
+    font-family 'franchise'
+    text-decoration none
+    transform translateY(3px)
+    background-color rgba(0,0,0,0)
+    border none
+    outline none
+    cursor pointer
+    &:before
+      content'<'
+      display block
+      padding 0 0 0 20px
+      font-size 50px
+      width 50px
+      height auto
+      transform translateX(40px) translateY(-35px)
 @keyframes pulse {
   0% {
     opacity: 1;

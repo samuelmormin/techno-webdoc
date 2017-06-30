@@ -3,6 +3,7 @@
     <div class="landingTitle">
       <h1 class="intro-h1">TECHNO</h1>
       <p class="intro-p">AU COEUR DE BERLIN</p>
+      <p class="textpres">La techno est une musique connue et fortement mise en avant dans les festivales actuels mais seuls les initiés de la première heure connaissent réellement son histoire.</p>
       <router-link :to="{name: 'chapterone'}" class="discover-button">DÉCOUVRIR</router-link>
     </div>
     <audio

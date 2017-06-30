@@ -28,7 +28,12 @@
         <p class="pute1">De hauteur</p>
       </div>
     </div>
-
+    <audio
+    src="/static/societe.mp3"
+    loop
+    autoplay
+    ref="audioPlayed"
+    ></audio>
   </div>
 </template>
 

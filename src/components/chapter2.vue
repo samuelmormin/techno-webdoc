@@ -1,10 +1,10 @@
 <template>
-  <div class="container-full">
+  <div class="container-full chapter2bg">
     <div class="half-block-1">
       <div class="audio-player center-player">
+        <p class="temoignageaudio">Temoignage</p>
         <audio
         src="/static/epoque-temoin.mp3"
-        autoplay
         loop
         ref="audioPlayed"
         ></audio>
